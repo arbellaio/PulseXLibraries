@@ -1,0 +1,95 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
+      <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Fonts\Montserrat-Black.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Black.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-BlackItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-BlackItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-BoldItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-BoldItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-ExtraBold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraBold.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-ExtraBoldItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraBoldItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-ExtraLight.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraLight.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-ExtraLightItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraLightItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-Italic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Italic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-Light.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Light.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-LightItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-LightItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-MediumItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-MediumItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-SemiBoldItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBoldItalic.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-Thin.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-Thin.ttf" />
+      <None Remove="Resources\Fonts\Montserrat-ThinItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Montserrat-ThinItalic.ttf" />
+      <None Remove="Resources\Fonts\Oxygen-Bold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Oxygen-Bold.ttf" />
+      <None Remove="Resources\Fonts\Oxygen-Light.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Oxygen-Light.ttf" />
+      <None Remove="Resources\Fonts\Oxygen-Regular.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Oxygen-Regular.ttf" />
+      <None Remove="Resources\Fonts\Sen-Bold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Sen-Bold.ttf" />
+      <None Remove="Resources\Fonts\Sen-ExtraBold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Sen-ExtraBold.ttf" />
+      <None Remove="Resources\Fonts\Sen-Regular.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Sen-Regular.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Black.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Black.ttf" />
+      <None Remove="Resources\Fonts\Roboto-BlackItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-BlackItalic.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Bold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+      <None Remove="Resources\Fonts\Roboto-BoldItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Italic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Italic.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Light.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Light.ttf" />
+      <None Remove="Resources\Fonts\Roboto-LightItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-LightItalic.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Medium.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+      <None Remove="Resources\Fonts\Roboto-MediumItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-MediumItalic.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+      <None Remove="Resources\Fonts\Roboto-Thin.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-Thin.ttf" />
+      <None Remove="Resources\Fonts\Roboto-ThinItalic.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
+      <None Remove="Resources\Fonts\FontAwesome5Solid.otf" />
+      <EmbeddedResource Include="Resources\Fonts\FontAwesome5Solid.otf" />
+      <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
+      <EmbeddedResource Include="Resources\Fonts\FontAwesome5Regular.otf" />
+      <None Remove="Resources\Fonts\FontAwesome5Light.otf" />
+      <EmbeddedResource Include="Resources\Fonts\FontAwesome5Light.otf" />
+      <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
+      <EmbeddedResource Include="Resources\Fonts\FontAwesome5Brands.otf" />
+    </ItemGroup>
+
+</Project>
