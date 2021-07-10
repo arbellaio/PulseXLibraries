@@ -27,7 +27,7 @@ namespace PulseXLibraries.Resources.Singleton
             if (obj != null)
             {
                 CollectionItems.Add(obj);
-                MessagingCenter.Send<SingletonCollection<T>, string>(this, "BasketCount", CollectionItems.Count.ToString());
+                MessagingCenter.Send<SingletonCollection<T>, string>(this, "CollectionCount", CollectionItems.Count.ToString());
             }
         }
 
@@ -35,27 +35,12 @@ namespace PulseXLibraries.Resources.Singleton
         {
             if (obj != null)
             {
-                // var item = CollectionItems.FirstOrDefault(x => x == obj.ProductId && x.Quantity == obj.Quantity);
-                // if (item != null)
-                // {
-                //     item.Quantity--;
-                //     if (item.Quantity <= 0)
-                //     {
-                //         CollectionItems.Remove(item);
-                //     }
-                // }
-                MessagingCenter.Send<SingletonCollection<T>, string>(this, "BasketCount", CollectionItems.Count.ToString()); 
+                CollectionItems.Remove(obj);
+                MessagingCenter.Send<SingletonCollection<T>, string>(this, "CollectionCount", CollectionItems.Count.ToString()); 
             }
         }
 
-        public void Remove(T obj)
-        {
-            // var product = CollectionItems.FirstOrDefault(x => x.ProductId == obj.ProductId && x.Quantity == obj.Quantity);
-            // if (product != null)
-            // {
-            //     CollectionItems.Remove(product);
-            // }
-        }
+      
 
         public void RemoveAll()
         {

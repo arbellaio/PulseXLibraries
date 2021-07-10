@@ -2,6 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>General Xamarin Packages</Title>
+        <Copyright>Pulse Ascent</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
