@@ -7,7 +7,7 @@ using PulseXLibraries.ViewModels.Base;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PulseXLibraries.Views
+namespace PulseXLibraries.Views.Base
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BasePage : ContentPage
