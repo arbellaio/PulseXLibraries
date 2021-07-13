@@ -3,17 +3,31 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PulseXLibraries.Controls.NavigationHeader.NavigationHeaderView"
-             HeightRequest="200">
-    
+             HeightRequest="200"
+             x:Name="RootView"
+             BindingContext="{x:Reference RootView}">
+
+
     <Grid BackgroundColor="White">
         <!-- <Image Aspect="AspectFill" -->
         <!--        Source="xamarinstore.jpg" -->
         <!--        Opacity="0.6" /> -->
-        <Label Text="Whats My Day Like!"
-               TextColor="Gray"
-               FontFamily="RobotoBold"
-               FontAttributes="Bold"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="{Binding HeaderText}"
+                   TextColor="Gray"
+                   FontFamily="RobotoBold"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+            <Label Text="{Binding DescriptionText}"
+                   TextColor="Gray"
+                   FontFamily="RobotoBold"
+                   FontAttributes="Bold"
+                   FontSize="Small"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+        </StackLayout>
+
     </Grid>
 </ContentView>

@@ -12,6 +12,68 @@ namespace PulseXLibraries.Controls.NavigationHeader
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NavigationHeaderView : ContentView
     {
+        
+        /// <summary>
+        /// Attached property for <seealso cref="BackgroundImage" />
+        /// </summary>
+        public static readonly BindableProperty BackgroundImageProperty =
+            BindableProperty.Create(nameof(BackgroundImage), typeof(ImageSource), typeof(NavigationHeaderView), default(ImageSource), BindingMode.TwoWay);
+
+        
+        /// <summary>
+        /// Gets or sets BackgroundImageProperty
+        /// </summary>
+        public ImageSource BackgroundImage
+        {
+            get
+            {
+                return (ImageSource)GetValue(BackgroundImageProperty);
+            }
+
+            set
+            {
+                SetValue(BackgroundImageProperty, value);
+            }
+        }
+        
+        /// <summary>
+        /// Attached property for <seealso cref="HeaderText" />
+        /// </summary>
+        public static readonly BindableProperty HeaderTextProperty =
+            BindableProperty.Create(nameof(HeaderText), typeof(string), typeof(NavigationHeaderView), default(string), BindingMode.TwoWay);
+        
+        public string HeaderText
+        {
+            get
+            {
+                return (string)GetValue(HeaderTextProperty);
+            }
+
+            set
+            {
+                SetValue(HeaderTextProperty, value);
+            }
+        }
+        
+        /// <summary>
+        /// Attached property for <seealso cref="DescriptionText" />
+        /// </summary>
+        public static readonly BindableProperty DescriptionTextProperty =
+            BindableProperty.Create(nameof(DescriptionText), typeof(string), typeof(NavigationHeaderView), default(string), BindingMode.TwoWay);
+
+        public string DescriptionText
+        {
+            get
+            {
+                return (string)GetValue(DescriptionTextProperty);
+            }
+
+            set
+            {
+                SetValue(DescriptionTextProperty, value);
+            }
+        }
+
         public NavigationHeaderView()
         {
             InitializeComponent();

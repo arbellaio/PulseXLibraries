@@ -4,13 +4,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="PulseXLibraries.Controls.NavigationFooter.NavigationFooterView">
-    <StackLayout>
+    <StackLayout Margin="10,10,10,10">
         <Label Text="Pulse Ascent Inc."
-               TextColor="GhostWhite"
+               TextColor="{AppThemeBinding Dark={StaticResource SystemBlueDark}, Light={StaticResource SystemBlue}}"
                FontAttributes="Bold"
+               FontFamily="RobotoBold"
                HorizontalOptions="Center" />
         <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
-               TextColor="GhostWhite"
+               FontAttributes="Bold"
+               FontFamily="RobotoBold"
+               TextColor="{AppThemeBinding Dark={StaticResource SystemBlueDark}, Light={StaticResource SystemBlue}}"
                HorizontalOptions="Center" />
     </StackLayout>
 </ContentView>
