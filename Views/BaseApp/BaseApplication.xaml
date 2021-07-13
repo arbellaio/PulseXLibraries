@@ -5,5 +5,6 @@
              x:Class="PulseXLibraries.Views.BaseApp.BaseApplication">
     <Application.Resources>
             <ResourceDictionary Source="/Resources/Styles/BaseAppStyle.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="/Resources/Styles/ControlStyles.xaml"></ResourceDictionary>
         </Application.Resources>
 </Application>
