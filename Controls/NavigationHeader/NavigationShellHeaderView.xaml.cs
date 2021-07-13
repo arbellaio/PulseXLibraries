@@ -10,14 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace PulseXLibraries.Controls.NavigationHeader
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NavigationHeaderView : ContentView
+    public partial class NavigationShellHeaderView : ContentView
     {
         
         /// <summary>
         /// Attached property for <seealso cref="BackgroundImage" />
         /// </summary>
         public static readonly BindableProperty BackgroundImageProperty =
-            BindableProperty.Create(nameof(BackgroundImage), typeof(ImageSource), typeof(NavigationHeaderView), default(ImageSource), BindingMode.TwoWay);
+            BindableProperty.Create(nameof(BackgroundImage), typeof(ImageSource), typeof(NavigationShellHeaderView), default(ImageSource), BindingMode.TwoWay);
 
         
         /// <summary>
@@ -40,7 +40,7 @@ namespace PulseXLibraries.Controls.NavigationHeader
         /// Attached property for <seealso cref="HeaderText" />
         /// </summary>
         public static readonly BindableProperty HeaderTextProperty =
-            BindableProperty.Create(nameof(HeaderText), typeof(string), typeof(NavigationHeaderView), default(string), BindingMode.TwoWay);
+            BindableProperty.Create(nameof(HeaderText), typeof(string), typeof(NavigationShellHeaderView), default(string), BindingMode.TwoWay);
         
         public string HeaderText
         {
@@ -59,7 +59,7 @@ namespace PulseXLibraries.Controls.NavigationHeader
         /// Attached property for <seealso cref="DescriptionText" />
         /// </summary>
         public static readonly BindableProperty DescriptionTextProperty =
-            BindableProperty.Create(nameof(DescriptionText), typeof(string), typeof(NavigationHeaderView), default(string), BindingMode.TwoWay);
+            BindableProperty.Create(nameof(DescriptionText), typeof(string), typeof(NavigationShellHeaderView), default(string), BindingMode.TwoWay);
 
         public string DescriptionText
         {
@@ -74,7 +74,7 @@ namespace PulseXLibraries.Controls.NavigationHeader
             }
         }
 
-        public NavigationHeaderView()
+        public NavigationShellHeaderView()
         {
             InitializeComponent();
         }

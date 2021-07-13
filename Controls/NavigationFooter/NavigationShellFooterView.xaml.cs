@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace PulseXLibraries.Controls.NavigationFooter
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NavigationFooterView : ContentView
+    public partial class NavigationShellFooterView : ContentView
     {
-        public NavigationFooterView()
+        public NavigationShellFooterView()
         {
             InitializeComponent();
         }
