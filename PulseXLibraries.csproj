@@ -96,4 +96,23 @@
       <EmbeddedResource Include="Resources\Fonts\FontAwesome5Brands.otf" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Controls\NavigationFooter\NavigationFooterView.xaml.cs">
+        <DependentUpon>NavigationFooterView.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Controls\NavigationFooter\NavigationFooterView.xaml.cs">
+        <DependentUpon>NavigationFooterView.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Controls\NavigationHeader\NavigationHeaderView.xaml.cs">
+        <DependentUpon>NavigationHeaderView.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Controls\NavigationHeader\NavigationHeaderView.xaml.cs">
+        <DependentUpon>NavigationHeaderView.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
 </Project>

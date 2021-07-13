@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PulseXLibraries.Controls.NavigationHeader.NavigationHeaderView"
+             HeightRequest="200">
+    
+    <Grid BackgroundColor="White">
+        <!-- <Image Aspect="AspectFill" -->
+        <!--        Source="xamarinstore.jpg" -->
+        <!--        Opacity="0.6" /> -->
+        <Label Text="Whats My Day Like!"
+               TextColor="Gray"
+               FontFamily="RobotoBold"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+    </Grid>
+</ContentView>
