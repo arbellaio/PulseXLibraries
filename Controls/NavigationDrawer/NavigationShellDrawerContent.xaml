@@ -7,21 +7,19 @@
              xmlns:model="clr-namespace:PulseXLibraries.Models.NavigationDrawerModel;assembly=PulseXLibraries"
              BindingContext="{x:Reference DrawerShellContentView}">
 
-    <ListView
-        ItemsSource="{Binding ItemsSource, Source={x:Reference DrawerShellContentView}}"
-        x:DataType="model:NavigationDrawerItemModel">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="{Binding ItemImage}" />
-                        <Label Text="{Binding ItemName}"
-                               TextColor="Gray"
-                               FontFamily="RobotoRegular"
-                               FontSize="Large" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout Orientation="Horizontal">
+        <Image>
+            <Image.Source>
+                <FontImageSource Color="{Binding FontImageItem.Color}"
+                                 FontFamily="{Binding FontImageItem.FontFamily}"
+                                 Size="{Binding FontImageItem.Size}"
+                                 Glyph="{Binding FontImageItem.Glyph}" />
+            </Image.Source>
+        </Image>
+        <Label Text="{Binding ItemText}"
+               TextColor="{Binding ItemTextColor}"
+               FontFamily="{Binding ItemFontFamily}"
+               FontSize="{Binding ItemFontSize}" />
+    </StackLayout>
+
 </ContentView>

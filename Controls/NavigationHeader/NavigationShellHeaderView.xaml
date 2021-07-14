@@ -8,22 +8,21 @@
              BindingContext="{x:Reference RootView}">
 
 
-    <Grid BackgroundColor="White">
-        <!-- <Image Aspect="AspectFill" -->
-        <!--        Source="xamarinstore.jpg" -->
-        <!--        Opacity="0.6" /> -->
+    <Grid BackgroundColor="{Binding BackgroundColor}">
+        <Image Aspect="AspectFill"
+               Source="{Binding BackgroundImage}"
+               Opacity="0.6" />
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Label Text="{Binding HeaderText}"
                    TextColor="Gray"
-                   FontFamily="RobotoBold"
+                   FontFamily="PoppinsRegular"
                    FontAttributes="Bold"
                    FontSize="Large"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center" />
             <Label Text="{Binding DescriptionText}"
                    TextColor="Gray"
-                   FontFamily="RobotoBold"
-                   FontAttributes="Bold"
+                   FontFamily="PoppinsRegular"
                    FontSize="Small"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center" />

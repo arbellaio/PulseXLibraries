@@ -95,6 +95,10 @@
       <EmbeddedResource Include="Resources\Fonts\FontAwesome5Light.otf" />
       <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
       <EmbeddedResource Include="Resources\Fonts\FontAwesome5Brands.otf" />
+      <None Remove="Resources\Fonts\PoppinsBold.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\PoppinsBold.ttf" />
+      <None Remove="Resources\Fonts\PoppinsRegular.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\PoppinsRegular.ttf" />
     </ItemGroup>
 
     <ItemGroup>
