@@ -3,17 +3,18 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
-             x:Class="PulseXLibraries.Controls.NavigationFooter.NavigationShellFooterView">
-    <StackLayout Margin="10,10,10,10">
+             x:Class="PulseXLibraries.Controls.NavigationFooter.NavigationShellFooterView" BackgroundColor="Transparent">
+    <StackLayout Margin="10,10,10,10" BackgroundColor="Transparent">
         <Label Text="Pulse Ascent Inc."
-               TextColor="{AppThemeBinding Dark={StaticResource SystemBlueDark}, Light={StaticResource SystemBlue}}"
+               TextColor="{AppThemeBinding Dark={StaticResource SystemGrayDark}, Light={StaticResource SystemGray}}"
                FontAttributes="Bold"
-               FontFamily="RobotoBold"
+               FontSize="12"
+               FontFamily="PoppinsRegular"
                HorizontalOptions="Center" />
         <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
-               FontAttributes="Bold"
-               FontFamily="RobotoBold"
-               TextColor="{AppThemeBinding Dark={StaticResource SystemBlueDark}, Light={StaticResource SystemBlue}}"
+               FontFamily="PoppinsRegular"
+               FontSize="10"
+               TextColor="{AppThemeBinding Dark={StaticResource SystemGrayDark}, Light={StaticResource SystemGray}}"
                HorizontalOptions="Center" />
     </StackLayout>
 </ContentView>

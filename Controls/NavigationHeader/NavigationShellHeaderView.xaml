@@ -2,31 +2,39 @@
 
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:icons="clr-namespace:PulseXLibraries.Resources.Icons;assembly=PulseXLibraries"
              x:Class="PulseXLibraries.Controls.NavigationHeader.NavigationShellHeaderView"
              HeightRequest="200"
              x:Name="RootView"
+             BackgroundColor="{Binding BackgroundColor}"
              BindingContext="{x:Reference RootView}">
 
 
-    <Grid BackgroundColor="{Binding BackgroundColor}">
+    <Grid BackgroundColor="Transparent"             
+          Margin="10, 10,5,10">
         <Image Aspect="AspectFill"
                Source="{Binding BackgroundImage}"
                Opacity="0.6" />
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Label Text="{Binding HeaderText}"
-                   TextColor="Gray"
-                   FontFamily="PoppinsRegular"
-                   FontAttributes="Bold"
-                   FontSize="Large"
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center" />
-            <Label Text="{Binding DescriptionText}"
-                   TextColor="Gray"
-                   FontFamily="PoppinsRegular"
-                   FontSize="Small"
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center" />
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <abstractions:CircleImage Source="{Binding UserImage}" />
+            <StackLayout Margin="10,0,10,0"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand">
+                <Label Text="{Binding HeaderText}"
+                       TextColor="{Binding HeaderTextColor}"
+                       FontFamily="{Binding HeaderTextFont}"
+                       FontAttributes="Bold"
+                       FontSize="{Binding HeaderTextSize}"
+                       HorizontalTextAlignment="{Binding HeaderTextHorizontal}"
+                       VerticalTextAlignment="{Binding HeaderTextVertical}" />
+                <Label Text="{Binding DescriptionText}"
+                       TextColor="{Binding DescriptionTextColor}"
+                       FontFamily="{Binding DescriptionTextFont}"
+                       FontSize="{Binding DescriptionTextSize}"
+                       HorizontalTextAlignment="{Binding DescriptionTextHorizontal}"
+                       VerticalTextAlignment="{Binding DescriptionTextVertical}" />
+            </StackLayout>
         </StackLayout>
+       
 
     </Grid>
 </ContentView>

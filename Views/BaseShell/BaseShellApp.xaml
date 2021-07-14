@@ -8,18 +8,14 @@
              x:Name="AppShell"
              Style="{StaticResource BaseStyle}"
              BindingContext="{x:Reference AppShell}">
-    
-    <!--
-        The overall app visual hierarchy is defined here, along with navigation.
-    
-        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
-    -->
-
+ 
     <Shell.Resources>
         <ResourceDictionary>
+            <!-- Shell BaseStyle -->
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor"  Value="{AppThemeBinding Dark={StaticResource SystemBlueDark},  Light={StaticResource SystemBlue}}" />
-                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.ForegroundColor" Value="Transparent" />
+                <Setter Property="Shell.BackgroundImageSource" Value="BackgroundImage.png" />
                 <Setter Property="Shell.TitleColor" Value="{x:AppThemeBinding Dark=White, Light=Gray}" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
@@ -30,9 +26,10 @@
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
-    <!-- -->
-    <!--         Default Styles for all Flyout Items -->
-    <!--         https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes -->
+   
+            
+            
+        
     <Style  Class="FlyoutItemLabelStyle" TargetType="Label">
         <Setter Property="TextColor" Value="White"/>
         <Setter Property="FontFamily" Value="PoppinsBold"/>
@@ -73,6 +70,9 @@
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
+    
+    
+    
     
     <!--     When the Flyout is visible this defines the content to display in the flyout. -->
     <!--     FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element     -->
