@@ -4,16 +4,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PulseXLibraries.Views.BaseMaster.BaseMasterPage"
              IsPresented="False"
-             x:Name="Page"
-             BindingContext="{x:Reference Page}">
+             x:Name="Page">
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
-            <ImageButton Scale="0.7" Source="{Binding MasterImage}" BackgroundColor="Transparent" Clicked="ImageButton_OnClicked"
+        <StackLayout Orientation="Horizontal"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+            <ImageButton  Source="menu.png" HeightRequest="30" WidthRequest="30"  BackgroundColor="Transparent"
+                          Clicked="ImageButton_OnClicked"
                          HorizontalOptions="Start">
             </ImageButton>
-            <Label Text="Whats My Day Like" VerticalOptions="Center"
-                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
-                   Style="{StaticResource PageTitleStyle}" />
+            <Label Margin="15,5,0,0" Text="Whats My Day Like" FontFamily="PoppinsRegular" FontSize="16" TextColor="White" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            />
         </StackLayout>
     </NavigationPage.TitleView>
+   
 </FlyoutPage>

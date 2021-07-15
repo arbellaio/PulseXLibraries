@@ -46,6 +46,13 @@ namespace PulseXLibraries.Helpers.Navigation
             Application.Current.MainPage = page;
         }
 
+        public void SetMainPage(Page page, Color barBackgroundColor, Color barTextColor)
+        {
+            Application.Current.MainPage = new NavigationPage(page) { 
+                BarBackgroundColor = barBackgroundColor,
+                BarTextColor = barTextColor
+            }; ;
+        }
         private Page MainPage
         {
             get { return Application.Current.MainPage; }
@@ -69,6 +76,7 @@ namespace PulseXLibraries.Helpers.Navigation
         Task PushAsync(Page page);
         Task PushModalAsync(Page page);
         void SetMainPage(Page page);
+        void SetMainPage(Page page, Color barBackgroundColor, Color barTextColor);
         Task<Page> PopModalAsync();
         void Remove();
     }
