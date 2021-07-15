@@ -19,7 +19,7 @@ namespace PulseXLibraries.Views.BaseMaster
         }
 
 
-        public void ImageButton_OnClicked(object sender, EventArgs e)
+        public async void ImageButton_OnClicked(object sender, EventArgs e)
         {
             this.IsPresented = !this.IsPresented;
         }

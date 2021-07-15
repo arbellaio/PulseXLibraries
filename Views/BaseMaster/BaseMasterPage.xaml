@@ -7,7 +7,7 @@
              x:Name="Page">
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
-            <ImageButton  Source="menu.png" HeightRequest="30" WidthRequest="30"  BackgroundColor="Transparent"
+            <ImageButton x:Name="MenuButton" Source="menu.png" HeightRequest="30" WidthRequest="30"  BackgroundColor="Transparent"
                           Clicked="ImageButton_OnClicked"
                          HorizontalOptions="Start">
             </ImageButton>
