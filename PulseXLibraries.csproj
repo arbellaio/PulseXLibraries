@@ -132,10 +132,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Android" />
-    </ItemGroup>
-
-    <ItemGroup>
       <SharedImage Include="Resources\Images\menu.png">
         <SubType>Designer</SubType>
       </SharedImage>

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using PulseXLibraries.Helpers.Navigation;
+using PulseXLibraries.Helpers.SafeArea;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,9 +34,27 @@ namespace PulseXLibraries.Views.BaseApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BaseApplication : Application
     {
+        public static INavigationService Navigation { get; private set; }
+        public static Thickness SafeArea { get; set; }
         public BaseApplication()
         {
             InitializeComponent();
+        }
+
+        public void Initialize()
+        {
+            try
+            {
+                
+                Navigation = new NavigationService();
+                
+                ISafeAreaHelper safeAreaService = DependencyService.Get<ISafeAreaHelper>();
+                SafeArea = safeAreaService.GetSafeArea();
+            }
+            catch (Exception ex)
+            {
+               SafeArea = new Thickness(0, 0, 0, 0.5);
+            }
         }
     }
 }

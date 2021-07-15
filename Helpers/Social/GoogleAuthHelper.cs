@@ -7,7 +7,9 @@ using Newtonsoft.Json;
 using Plugin.GoogleClient;
 using Plugin.GoogleClient.Shared;
 using PulseXLibraries.Helpers.Alert;
+using PulseXLibraries.Helpers.SafeArea;
 using PulseXLibraries.Models.NetworkAuth;
+using PulseXLibraries.Views.BaseApp;
 using Xamarin.Forms;
 
 namespace PulseXLibraries.Helpers.Social
@@ -64,11 +66,11 @@ namespace PulseXLibraries.Helpers.Social
                             try
                             {
                                 ISafeAreaHelper safeAreaService = DependencyService.Get<ISafeAreaHelper>();
-                                App.SafeArea = safeAreaService.GetSafeArea();
+                                BaseApplication.SafeArea = safeAreaService.GetSafeArea();
                             }
                             catch (Exception ex)
                             {
-                                App.SafeArea = new Thickness(0, 0, 0, 0.5);
+                                BaseApplication.SafeArea = new Thickness(0, 0, 0, 0.5);
                             }
 
                           
