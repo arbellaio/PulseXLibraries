@@ -17,4 +17,11 @@
         </StackLayout>
     </NavigationPage.TitleView>
    
+    <!-- <FlyoutPage.Detail> -->
+        <!-- <NavigationPage> -->
+        <!--     <x:Arguments> -->
+        <!--         <home:HomePage/> -->
+        <!--     </x:Arguments> -->
+        <!-- </NavigationPage> -->
+    <!-- </FlyoutPage.Detail> -->
 </FlyoutPage>
