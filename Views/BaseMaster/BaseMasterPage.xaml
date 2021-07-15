@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PulseXLibraries.Views.BaseMaster.BaseMasterPage"
+             IsPresented="False"
+             x:Name="Page"
+             BindingContext="{x:Reference Page}">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+            <ImageButton Scale="0.7" Source="{Binding MasterImage}" BackgroundColor="Transparent" Clicked="ImageButton_OnClicked"
+                         HorizontalOptions="Start">
+            </ImageButton>
+            <Label Text="Whats My Day Like" VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                   Style="{StaticResource PageTitleStyle}" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+</FlyoutPage>

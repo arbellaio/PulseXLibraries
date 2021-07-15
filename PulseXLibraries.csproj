@@ -10,9 +10,10 @@
     <ItemGroup>
       <PackageReference Include="FirebaseDatabase.net" Version="4.0.6" />
       <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
+      <PackageReference Include="Resizetizer.NT" Version="0.2.0" />
       <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.3" />
       <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
-      <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+      <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     </ItemGroup>
 
     <ItemGroup>
@@ -129,6 +130,12 @@
 
     <ItemGroup>
       <Folder Include="Android" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <SharedImage Include="Resources\Images\menu.png">
+        <SubType>Designer</SubType>
+      </SharedImage>
     </ItemGroup>
 
 </Project>
