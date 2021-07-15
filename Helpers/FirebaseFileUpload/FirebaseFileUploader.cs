@@ -8,7 +8,7 @@ namespace PulseXLibraries.Helpers.FirebaseFileUpload
 {
     public class FirebaseFileUploadHelper
     {
-        public async Task<FirebaseStorageTask> UploadFileToFirebase(string fileName,MemoryStream fileMemoryStream, string apiKey, string firebaseStorageUrl, string email, string password)
+        public static async Task<FirebaseStorageTask> UploadFileToFirebase(string fileName,MemoryStream fileMemoryStream, string apiKey, string firebaseStorageUrl, string email, string password)
         {
             FirebaseStorageTask firebaseStorageTask;
             // await using var ms = new MemoryStream();
