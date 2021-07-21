@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Newtonsoft.Json;
@@ -25,7 +26,7 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
             }
         }
 
-        public async Task AddToFirebase<T>(FirebaseItem<T> firebaseItem, string resourceName, bool generateKey = true, TimeSpan? timeOut = null)
+        public static async Task AddToFirebase<T>(FirebaseItem<T> firebaseItem, string resourceName, bool generateKey = true, TimeSpan? timeOut = null)
         {
             try
             {
@@ -38,7 +39,7 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
         }
 
 
-        public async Task<FirebaseItem<T>> GetItemById<T>(FirebaseItem<T> firebaseItem, string resourceName,  TimeSpan? timeOut = null)
+        public static async Task<FirebaseItem<T>> GetItemById<T>(FirebaseItem<T> firebaseItem, string resourceName,  TimeSpan? timeOut = null)
         {
             try
             {
@@ -54,7 +55,7 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
         }
         
         
-        public async Task UpdateItemById<T>(FirebaseItem<T> firebaseItem, string resourceName,  TimeSpan? timeOut = null)
+        public static async Task UpdateItemById<T>(FirebaseItem<T> firebaseItem, string resourceName,  TimeSpan? timeOut = null)
         {
             var itemInDb =  (await _firebaseClient.Child(resourceName).OnceAsync<FirebaseItem<T>>()).FirstOrDefault(x => x.Object.Id.Equals(firebaseItem.Id));
             if (itemInDb != null)
@@ -63,7 +64,7 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
             }
         }
 
-        public async Task DeleteItemById<T>(FirebaseItem<T> firebaseItem, string resourceName, TimeSpan? timeOut = null)
+        public static async Task DeleteItemById<T>(FirebaseItem<T> firebaseItem, string resourceName, TimeSpan? timeOut = null)
         {
             var itemInDb =  (await _firebaseClient.Child(resourceName).OnceAsync<FirebaseItem<T>>()).FirstOrDefault(x => x.Object.Id.Equals(firebaseItem.Id));
             if (itemInDb != null)
@@ -72,7 +73,7 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
             }
         }
 
-        public async Task<List<FirebaseObject<FirebaseItem<T>>>> GetAllItems<T>(string resourceName, TimeSpan? timeOut = null)
+        public static async Task<List<FirebaseObject<FirebaseItem<T>>>> GetAllItems<T>(string resourceName, TimeSpan? timeOut = null)
         {
             var itemInDb = (await _firebaseClient.Child(resourceName).OnceAsync<FirebaseItem<T>>(timeOut)).ToList();
             return itemInDb;

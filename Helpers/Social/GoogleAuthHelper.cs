@@ -66,11 +66,11 @@ namespace PulseXLibraries.Helpers.Social
                             try
                             {
                                 ISafeAreaHelper safeAreaService = DependencyService.Get<ISafeAreaHelper>();
-                                BaseApplication.SafeArea = safeAreaService.GetSafeArea();
+                                BaseApp.SafeArea = safeAreaService.GetSafeArea();
                             }
                             catch (Exception ex)
                             {
-                                BaseApplication.SafeArea = new Thickness(0, 0, 0, 0.5);
+                                BaseApp.SafeArea = new Thickness(0, 0, 0, 0.5);
                             }
 
                           

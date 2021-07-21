@@ -32,13 +32,15 @@ using Xamarin.Forms.Xaml;
 namespace PulseXLibraries.Views.BaseApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BaseApplication : Application
+    public partial class BaseApp : Application
     {
         public static INavigationService Navigation { get; private set; }
         public static Thickness SafeArea { get; set; }
-        public BaseApplication()
+        public BaseApp()
         {
             InitializeComponent();
+            Initialize();
+
         }
 
         public void Initialize()
