@@ -63,6 +63,15 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
                 await _firebaseClient.Child(resourceName + "/" + itemInDb.Key).PatchAsync(JsonConvert.SerializeObject(firebaseItem), timeOut);
             }
         }
+        
+        public static async Task UpdateItemByStringId<T>(FirebaseItem<T> firebaseItem, string resourceName,  TimeSpan? timeOut = null)
+        {
+            var itemInDb =  (await _firebaseClient.Child(resourceName).OnceAsync<FirebaseItem<T>>()).FirstOrDefault(x => x.Object.StringId.Equals(firebaseItem.StringId));
+            if (itemInDb != null)
+            {
+                await _firebaseClient.Child(resourceName + "/" + itemInDb.Key).PatchAsync(JsonConvert.SerializeObject(firebaseItem), timeOut);
+            }
+        }
 
         public static async Task DeleteItemById<T>(FirebaseItem<T> firebaseItem, string resourceName, TimeSpan? timeOut = null)
         {
@@ -73,9 +82,18 @@ namespace PulseXLibraries.Helpers.FirebaseRealTime
             }
         }
 
-        public static async Task<List<FirebaseObject<FirebaseItem<T>>>> GetAllItems<T>(string resourceName, TimeSpan? timeOut = null)
+        public static async Task DeleteItemByStringId<T>(FirebaseItem<T> firebaseItem, string resourceName, TimeSpan? timeOut = null)
         {
-            var itemInDb = (await _firebaseClient.Child(resourceName).OnceAsync<FirebaseItem<T>>(timeOut)).ToList();
+            var itemInDb =  (await _firebaseClient.Child(resourceName).OnceAsync<FirebaseItem<T>>()).FirstOrDefault(x => x.Object.StringId.Equals(firebaseItem.StringId));
+            if (itemInDb != null)
+            {
+                await _firebaseClient.Child(resourceName + "/" + itemInDb.Key).DeleteAsync(timeOut);
+            }
+        }
+
+        public static async Task<List<FirebaseObject<T>>> GetAllItems<T>(string resourceName, TimeSpan? timeOut = null)
+        {
+            var itemInDb = (await _firebaseClient.Child(resourceName).OnceAsync<T>(timeOut)).ToList();
             return itemInDb;
         }
     }

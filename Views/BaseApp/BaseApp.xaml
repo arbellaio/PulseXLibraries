@@ -2,9 +2,44 @@
 
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:valueConverters="clr-namespace:PulseXLibraries.ValueConverters;assembly=PulseXLibraries"
              x:Class="PulseXLibraries.Views.BaseApp.BaseApp">
     <Application.Resources>
             <ResourceDictionary Source="/Resources/Styles/BaseAppStyle.xaml"></ResourceDictionary>
             <ResourceDictionary Source="/Resources/Styles/ControlStyles.xaml"></ResourceDictionary>
-        </Application.Resources>
+        <ControlTemplate x:Key="BaseTemplate">
+            <Grid>
+                <Grid.Resources>
+                    <valueConverters:InverseBoolConverter x:Key="InverseBoolConverter" />
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackLayout
+                    Grid.Row="0"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding BindingContext.IsLoading, Source={RelativeSource TemplatedParent}}"
+                    Spacing="20"
+                    VerticalOptions="CenterAndExpand">
+                    <ActivityIndicator
+                        HorizontalOptions="Center"
+                        IsRunning="{Binding BindingContext.IsLoading, Source={RelativeSource TemplatedParent}}"
+                        IsVisible="{Binding BindingContext.IsLoading, Source={RelativeSource TemplatedParent}}"
+                        VerticalOptions="Center" />
+                    <Label
+                        CharacterSpacing="1.5"
+                        HorizontalOptions="Center"
+                        Text=""
+                        FontFamily="RobotoRegular"
+                        VerticalOptions="Center" />
+                </StackLayout>
+
+                <ContentPresenter Grid.Row="0" IsVisible="{Binding BindingContext.IsLoading, Source={RelativeSource TemplatedParent}, Converter={StaticResource InverseBoolConverter}}" />
+            </Grid>
+        </ControlTemplate>
+
+    </Application.Resources>
+
+
 </Application>

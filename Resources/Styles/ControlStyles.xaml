@@ -35,7 +35,7 @@
     
     <Style x:Key="DefaultEntryStyleGray" TargetType="Entry">
         <Setter Property="FontSize" Value="Default"/>
-        <Setter Property="FontFamily" Value="Regular"/>
+        <Setter Property="FontFamily" Value="RobotoRegular"/>
         <Setter Property="TextColor" Value="Gray"/>
     </Style>
 
