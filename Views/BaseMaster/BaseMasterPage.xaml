@@ -5,17 +5,7 @@
              x:Class="PulseXLibraries.Views.BaseMaster.BaseMasterPage"
              IsPresented="False"
              x:Name="Page">
-    <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
-            <ImageButton x:Name="MenuButton" Source="menu.png" HeightRequest="30" WidthRequest="30"  BackgroundColor="Transparent"
-                          Clicked="ImageButton_OnClicked"
-                         HorizontalOptions="Start">
-            </ImageButton>
-            <Label Margin="15,5,0,0" Text="Whats My Day Like" FontFamily="PoppinsRegular" FontSize="16" TextColor="White" VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-            />
-        </StackLayout>
-    </NavigationPage.TitleView>
+   
    
     <!-- <FlyoutPage.Detail> -->
         <!-- <NavigationPage> -->
