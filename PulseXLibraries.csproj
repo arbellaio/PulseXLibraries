@@ -14,6 +14,7 @@
       <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
       <PackageReference Include="Plugin.GoogleClient" Version="2.1.12" />
       <PackageReference Include="Resizetizer.NT" Version="0.2.0" />
+      <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.12" />
       <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.3" />
       <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
       <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
@@ -138,6 +139,10 @@
       <SharedImage Include="Resources\Images\menu.png">
         <SubType>Designer</SubType>
       </SharedImage>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="PlatformSpecific\iOSCode" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icons="clr-namespace:PulseXLibraries.Resources.Icons;assembly=PulseXLibraries"
+             x:Class="PulseXLibraries.Controls.NavigationBottom.NavigationBottomView">
+      <StackLayout BackgroundColor="Black" VerticalOptions="EndAndExpand">
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="20,0,20,0" VerticalOptions="EndAndExpand"
+                         HorizontalOptions="CenterAndExpand">
+                <ImageButton Margin="20,20,20,20" Command="{Binding OpenWriteNoteCommand}"
+                             BackgroundColor="Transparent">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesomeSolid" Glyph="{x:Static icons:FontAwesomeIcons.Edit}"
+                                         Size="Large" Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton Margin="20,20,20,20" BackgroundColor="Transparent">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesomeSolid"
+                                         Glyph="{x:Static icons:FontAwesomeIcons.Microphone}" Size="Large"
+                                         Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton Margin="20,20,20,20" BackgroundColor="Transparent">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesomeSolid" Glyph="{x:Static icons:FontAwesomeIcons.Camera}"
+                                         Size="Large" Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton Margin="20,20,20,20" BackgroundColor="Transparent">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesomeSolid"
+                                         Glyph="{x:Static icons:FontAwesomeIcons.CheckSquare}" Size="Large"
+                                         Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </StackLayout>
+
+        </StackLayout>
+</ContentView>

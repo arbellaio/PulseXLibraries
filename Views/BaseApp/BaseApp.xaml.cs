@@ -34,6 +34,8 @@ namespace PulseXLibraries.Views.BaseApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BaseApp : Application
     {
+        public static int ScreenWidth { get; set; }
+        public static int ScreenHeight { get; set; }
         public static INavigationService Navigation { get; private set; }
         public static Thickness SafeArea { get; set; }
         public BaseApp()
