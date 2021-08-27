@@ -1,6 +1,6 @@
 namespace PulseXLibraries.PlatformSpecific.AndroidCode
 {
-    public class ScreenSize
+    public static class ScreenSize
     {
         // void SetupScreenSize()
         // {

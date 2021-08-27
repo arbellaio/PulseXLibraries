@@ -141,8 +141,4 @@
       </SharedImage>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="PlatformSpecific\iOSCode" />
-    </ItemGroup>
-
 </Project>
